@@ -20,7 +20,7 @@ const App = () => {
   
 
   return (
-    <div className="px-[200px]">
+    <div className="px-50">
       <Navbar />
 
       <div className="flex p-10 gap-6">
