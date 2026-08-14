@@ -1,7 +1,9 @@
+import { useState } from "react";
 import ProductsCard from "./Components/ProductsCard";
 
 const App = () => {
-  let productData = [
+    
+   const [productData, setProductState] = useState([
     {
       id: 1,
       title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -272,8 +274,14 @@ const App = () => {
         count: 145,
       },
     },
-  ];
-  console.log(productData);
+  ])
+
+  // console.log(productData);
+
+  const deleteProduct = (id) => {
+     let product = productData.filter((elem)=> elem.id !== id)
+     setProductState(product)
+  }
 
   return (
     <div>
@@ -284,7 +292,7 @@ const App = () => {
 
         {
           productData.map((elem)=>
-           <ProductsCard product={elem}/>
+           <ProductsCard product={elem} del={deleteProduct}/>
           )
         }
       </div>
