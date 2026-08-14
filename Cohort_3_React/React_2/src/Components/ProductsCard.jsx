@@ -1,6 +1,6 @@
 import React from "react"
 
-const ProductsCard = ({product}) => {
+const ProductsCard = ({product , del}) => {
   return (
     <div className="p-4 border-2 rounded flex flex-col gap-4">
         
@@ -14,7 +14,7 @@ const ProductsCard = ({product}) => {
         <p className="text-green-600">{product.price}</p>
       </div>
 
-      <button className="p-2 bg-red-500">Delete</button>
+      <button onClick={()=>{del(product.id)}} className="p-2 bg-red-500">Delete</button>
 
     </div>
   )
@@ -22,3 +22,4 @@ const ProductsCard = ({product}) => {
 
 export default ProductsCard
 
+ 
