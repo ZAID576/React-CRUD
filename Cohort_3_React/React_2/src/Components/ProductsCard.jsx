@@ -18,7 +18,7 @@ const ProductsCard = ({product , del}) => {
 
     </div>
   )
-}
+};
 
 export default ProductsCard
 
