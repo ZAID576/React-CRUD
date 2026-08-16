@@ -1,5 +1,3 @@
-import React from "react"
-
 const ProductsCard = ({product , del}) => {
   return (
     <div className="p-4 border-2 rounded flex flex-col gap-4">
