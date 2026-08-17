@@ -19,7 +19,7 @@ const Register = ({setToggle}) => {
         </form>
 
         <p>
-            Already have an account! <span onClick={()=>{setToggle(true)}} className='text-blue-600 cursor-pointer'>Login here</span>
+            Already have an account! <span onClick={()=>{setToggle((prev) => !prev)}} className='text-blue-600 cursor-pointer'>Login here</span>
         </p>
 
     </div>
