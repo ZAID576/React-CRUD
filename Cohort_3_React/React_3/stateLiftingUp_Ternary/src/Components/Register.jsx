@@ -1,5 +1,3 @@
-// import React, { useState } from 'react'
-
 const Register = ({setToggle}) => {
   return (
     <div className='bg-white w-90 p-6 rounded-2xl flex flex-col gap-4'>
