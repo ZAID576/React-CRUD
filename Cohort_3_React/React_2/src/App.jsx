@@ -3,7 +3,7 @@ import ProductsCard from "./Components/ProductsCard";
 
 const App = () => {
     
-   const [productData, setProductState] = useState([
+   const [productData, setProductData] = useState([
     {
       id: 1,
       title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -278,9 +278,10 @@ const App = () => {
 
   // console.log(productData);
 
+  // delete logic
   const deleteProduct = (id) => {
      let product = productData.filter((elem)=> elem.id !== id)
-     setProductState(product)
+     setProductData(product)
   }
 
   return (
