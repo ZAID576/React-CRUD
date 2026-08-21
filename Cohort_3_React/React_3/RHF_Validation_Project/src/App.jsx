@@ -12,20 +12,26 @@ const App = () => {
   //    setUser(product);
   //  }
 
+  const deleteUser = (id)=>{
+    const updatedUser = user.filter((elem, index) => index !== id);
+    setUser(updatedUser);
+    localStorage.setItem("user", JSON.stringify(updatedUser));
+  }
+
   return (
     <div className="p-3 h-screen flex flex-col gap-4" >
       <Navbar setToggle={setToggle}/>
 
       {toggle ? (
-        <div className="flex gap-10  ">
+        <div className="flex flex-wrap gap-10  ">
        {
-       user.map((elem)=>
-        <Usercard user={elem}/>)
+       user.map((elem, index)=>
+        <Usercard user={elem} deleteUser={deleteUser} ind ={index}/>)
        }  
       </div>
       ) : (
         <div className="flex justify-center h-[70%] items-center">
-          <Form setToggle={setToggle} setUser={setUser}/>
+          <Form setToggle={setToggle} setUser={setUser} user={user}/>
         </div>
       ) 
       }
