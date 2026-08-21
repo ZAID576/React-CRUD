@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Usercard = ({user}) => {
+const Usercard = ({user, deleteUser, ind}) => {
   return (
     <div className='p-4 border border-black rounded'>
       
@@ -15,8 +15,8 @@ const Usercard = ({user}) => {
       </div>
 
       <div className='flex w-full justify-between gap-4'>
-        <button className='bg-yellow-700 text-white py-2 px-3 rounded'>Update</button>
-        <button className='bg-red-700 text-white py-2 px-3 rounded' >Delete</button>
+        <button onClick={()=> } className='bg-yellow-700 text-white py-2 px-3 rounded'>Update</button>
+        <button onClick={() => deleteUser(ind)} className='bg-red-700 text-white py-2 px-3 rounded' >Delete</button>
       </div>
 
     </div>
