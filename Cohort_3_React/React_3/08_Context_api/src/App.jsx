@@ -6,6 +6,7 @@ import Cart from "./Components/Cart";
 
 const App = () => {
   const [isCardOpen, setIsCardOpen] = useState(true);
+  const [cartItems, setCartItems] = useState([]);
 
   const product = [
     {
@@ -288,10 +289,10 @@ const App = () => {
 {
   isCardOpen ? (<div className="grid grid-cols-5 gap-4">
         {product.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} setCartItems={setCartItems} />
         ))}
       </div>) : (<div>
-        <Cart />
+        <Cart cartItems={cartItems} />
       </div>)
 }    
 
